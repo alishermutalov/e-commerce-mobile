@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - st40 Shop</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/product-details.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <i class="fas fa-shopping-cart"></i>
+      <span>st40 shop</span>
+    </div>
+    <button class="theme-toggle">🌙</button>
+  </nav>
+
+  <main>
+    <!-- Product Details Section -->
+    <section id="product-details">
+      <h2>Product Details</h2>
+      <div class="product-details-card">
+        <img src="https://picsum.photos/200/200?random=4" alt="Product Image">
+        <h3>Product 1</h3>
+        <p>$10.00</p>
+        <p>This is a sample product description. It includes details about the product, its features, and benefits.</p>
+        <div class="quantity-control">
+          <button class="quantity-btn" id="decrease">-</button>
+          <span id="quantity">1</span>
+          <button class="quantity-btn" id="increase">+</button>
+        </div>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div class="footer">
+    <button><i class="fas fa-home"></i></button>
+    <button><i class="fas fa-shopping-cart"></i></button>
+    <button><i class="fas fa-heart"></i></button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

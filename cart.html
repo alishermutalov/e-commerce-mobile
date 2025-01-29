@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - st40 Shop</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <i class="fas fa-shopping-cart"></i>
+      <span>st40 shop</span>
+    </div>
+    <button class="theme-toggle">🌙</button>
+  </nav>
+
+  <main>
+    <!-- Cart Section -->
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <div class="cart-items">
+        <!-- Sample Cart Items -->
+        <div class="cart-item">
+          <img src="https://picsum.photos/50/50?random=5" alt="Product 1">
+          <div class="cart-item-details">
+            <h3>Product 1</h3>
+            <p>$10.00</p>
+            <div class="quantity-control">
+              <button class="quantity-btn decrease">-</button>
+              <span>2</span>
+              <button class="quantity-btn increase">+</button>
+            </div>
+          </div>
+          <button class="delete-btn"><i class="fas fa-trash"></i></button>
+        </div>
+        <div class="cart-item">
+          <img src="https://picsum.photos/50/50?random=6" alt="Product 2">
+          <div class="cart-item-details">
+            <h3>Product 2</h3>
+            <p>$15.00</p>
+            <div class="quantity-control">
+              <button class="quantity-btn decrease">-</button>
+              <span>1</span>
+              <button class="quantity-btn increase">+</button>
+            </div>
+          </div>
+          <button class="delete-btn"><i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+      <div class="total-price">
+        <p>Total: $35.00</p>
+      </div>
+      <button class="checkout-btn">Checkout</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div class="footer">
+    <button><i class="fas fa-home"></i></button>
+    <button class="active"><i class="fas fa-shopping-cart"></i></button>
+    <button><i class="fas fa-heart"></i></button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

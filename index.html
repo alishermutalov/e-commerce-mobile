@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>st40 Shop</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <i class="fas fa-shopping-cart"></i>
+      <span>ST40 Shop</span>
+    </div>
+    <button class="theme-toggle">🌙</button>
+  </nav>
+
+  <main>
+    <!-- Promotions Section -->
+    <section id="promotions">
+      <h2>Promotions</h2>
+      <div class="promo-card">
+        <img src="https://picsum.photos/300/150?random=1" alt="Promo 1">
+        <p>Get 50% off on your first order!</p>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories">
+      <h2>Categories</h2>
+      <div class="category-list">
+        <button class="category-btn">Food</button>
+        <button class="category-btn">Drinks</button>
+        <button class="category-btn">Desserts</button>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+      <h2>Products</h2>
+      <div class="product-list">
+        <div class="product-card">
+          <img src="https://picsum.photos/100/100?random=2" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>$10.00</p>
+          <div class="product-actions">
+            <a href="product-details.html?id=1" class="view-details-btn">Details</a>
+            <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="https://picsum.photos/100/100?random=3" alt="Product 2">
+          <h3>Product 2</h3>
+          <p>$15.00</p>
+          <div class="product-actions">
+            <a href="product-details.html?id=2" class="view-details-btn">Details</a>
+            <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div class="footer">
+    <button><i class="fas fa-home"></i></button>
+    <button><i class="fas fa-shopping-cart"></i></button>
+    <button><i class="fas fa-heart"></i></button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
