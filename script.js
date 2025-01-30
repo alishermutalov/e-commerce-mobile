@@ -121,7 +121,7 @@ if (addToCartButtons) {
       localStorage.setItem('cart', JSON.stringify(cart));
 
       // Notify user
-      alert(`${productName} Savatga qo'shildi!`);
+      showAlert(`${productName} Savatga qo'shildi!`);
     });
   });
 }
@@ -211,9 +211,9 @@ const checkoutBtn = document.querySelector('.checkout-btn');
 if (checkoutBtn) {
   checkoutBtn.addEventListener('click', () => {
     if (cart.length === 0) {
-      alert('Savatingiz bo\'sh!');
+      showAlert('Savatingiz bo\'sh!');
     } else {
-      alert('Xaridingiz uchun raxmat!');
+      showAlert('Xaridingiz uchun raxmat!');
       localStorage.removeItem('cart');
       cart = [];
       document.querySelector('.cart-items').innerHTML = '';
