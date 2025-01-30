@@ -37,7 +37,7 @@ footerButtons.forEach(button => {
     } else if (button.querySelector('.fa-shopping-cart')) {
       window.location.href = 'cart.html';
     } else if (button.querySelector('.fa-heart')) {
-      alert('Liked items page coming soon!');
+      alert('Tez kunda!');
     }
   });
 });
@@ -98,7 +98,7 @@ if (addToCartButtons) {
       localStorage.setItem('cart', JSON.stringify(cart));
 
       // Notify user
-      alert(`${productName} added to cart!`);
+      alert(`${productName} Savatga qo'shildi!`);
     });
   });
 }
@@ -174,9 +174,9 @@ if (cartItemsContainer) {
   // Update Total Price
   function updateTotalPrice() {
     const totalPrice = cart.reduce((total, item) => {
-      return total + parseFloat(item.price.replace('$', '')) * item.quantity;
+      return total + parseFloat(item.price.replace(' ', '')) * item.quantity;
     }, 0);
-    document.querySelector('.total-price p').textContent = `Total: $${totalPrice.toFixed(2)}`;
+    document.querySelector('.total-price p').textContent = `Umumiy narxi: ${totalPrice.toFixed(2)} so'm`;
   }
 
   updateTotalPrice();
@@ -188,9 +188,9 @@ const checkoutBtn = document.querySelector('.checkout-btn');
 if (checkoutBtn) {
   checkoutBtn.addEventListener('click', () => {
     if (cart.length === 0) {
-      alert('Your cart is empty!');
+      alert('Savatingiz bo\'sh!');
     } else {
-      alert('Thank you for your purchase!');
+      alert('Xaridingiz uchun raxmat!');
       localStorage.removeItem('cart');
       cart = [];
       document.querySelector('.cart-items').innerHTML = '';
