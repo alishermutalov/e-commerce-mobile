@@ -13,6 +13,7 @@ body.dark-mode {
   color: #ffffff;
 }
 
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -23,7 +24,7 @@ body.dark-mode {
   color: #ffffff;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 95%;
   z-index: 1000;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -34,6 +35,7 @@ body.dark-mode {
   align-items: center;
   gap: 0.5rem;
   font-size: 1.2rem;
+  margin-left: 10px; /* Add margin to move it slightly to the left */
 }
 
 .navbar-brand i {
@@ -46,6 +48,7 @@ body.dark-mode {
   color: #ffffff;
   font-size: 1.5rem;
   cursor: pointer;
+  margin-right: 10px; /* Add margin to move it slightly to the left */
 }
 
 /* Footer */
@@ -99,11 +102,54 @@ button {
 }
 
 button:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /* Dark Mode Styles */
 body.dark-mode button {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Blurred Alert */
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 10000; /* Ensure it's above everything */
+  display: none; /* Hidden by default */
+  max-width: 70%;
+  width: 90%;
+}
+
+.alert.dark-mode {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black for dark mode */
+  color: #ffffff;
+}
+
+.alert-message {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.alert-close-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.alert-close-btn.dark-mode {
   background-color: #ffffff;
   color: #000000;
 }

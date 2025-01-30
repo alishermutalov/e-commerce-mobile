@@ -1,3 +1,26 @@
+// Function to show alert
+function showAlert(message) {
+  const alert = document.createElement('div');
+  alert.classList.add('alert');
+  if (document.body.classList.contains('dark-mode')) {
+    alert.classList.add('dark-mode');
+  }
+  alert.innerHTML = `
+    <div class="alert-message">${message}</div>
+    <button class="alert-close-btn">OK</button>
+  `;
+  document.body.appendChild(alert);
+
+  // Close alert on button click
+  const closeBtn = alert.querySelector('.alert-close-btn');
+  closeBtn.addEventListener('click', () => {
+    alert.remove();
+  });
+
+  // Show the alert
+  alert.style.display = 'block';
+}
+
 // Theme Toggle
 const themeToggle = document.querySelector('.theme-toggle');
 const body = document.body;
@@ -36,8 +59,8 @@ footerButtons.forEach(button => {
       window.location.href = 'index.html';
     } else if (button.querySelector('.fa-shopping-cart')) {
       window.location.href = 'cart.html';
-    } else if (button.querySelector('.fa-heart')) {
-      alert('Tez kunda!');
+    } else if (button.querySelector('.fa-tags')) {
+      showAlert('Tez kunda!');
     }
   });
 });
